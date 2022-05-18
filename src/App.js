@@ -33,7 +33,10 @@ function App() {
       }
       
       <Routes>
-        <Route path='addtodo' element={<AddTask></AddTask>}></Route>
+        <Route path='addtodo' element={<RequireAuth>
+          <AddTask></AddTask>
+        </RequireAuth>}></Route>
+        
 
         <Route path='login' element={<Login></Login>}></Route>
 
